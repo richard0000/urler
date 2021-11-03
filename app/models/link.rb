@@ -1,9 +1,9 @@
 class Link < ApplicationRecord
   validates :url, presence: true
   validates :slug, uniqueness: true
-  before_save :generate_slug
+  before_validation :generate_slug
 
   def generate_slug
-    slug = SecureRandom.uuid
+    self.slug = SecureRandom.hex
   end
 end

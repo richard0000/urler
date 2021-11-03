@@ -1,0 +1,16 @@
+<div class="jumbotron text-center mt-5">
+  <h1 class="display-4">Urler</h1>
+  <p class="lead">With Urler you will be able to get a short version of your favourite URL's in seconds!</p>
+  <p class="lead">Then you can go there anytime you want</p>
+</div>
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h2 class="fw-light">Great! Here's your new shor URL</h2>
+        <a><%= "#{request.domain}/#{@link.slug}" %></a>
+      </div>
+    </div>
+  </section>
+</main>

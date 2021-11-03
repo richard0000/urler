@@ -9,9 +9,16 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h2 class="fw-light">Try it out!</h2>
-        <p class="lead text-muted">Ener a URL (try with a large one) and see the result. Then visit it.</p>
-        <input type="url" />
-        <button class="btn btn-primary my-2" type="submit">Shorten it!</button>
+        <p class="lead text-muted">Enter a URL (try with a large one) and see the result. Then visit it.</p>
+        <% if(@link.present?) %>
+          <h3>Great! Here's your new shor URL</h3>
+          <h4><%= @link.slug %></h4>
+        <% else %>
+          <%= form_for :link, url: create_link_path do |l| %>
+            URL: <%= l.url_field :url %><br />
+            <%= l.submit class: 'btn btn-primary my-2' %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </section>
