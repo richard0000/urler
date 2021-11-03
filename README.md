@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a URL shortener. It means that it will give the user the chance to enter a normal URL and receive a short version of it to visit anytime he/she wants.
 
-Things you may want to cover:
+#### Installation
 
-* Ruby version
+#### Prerequisites
 
-* System dependencies
+- Have installed Rails 6+, Ruby 2.6.3, NodeJS
 
-* Configuration
+#### Steps
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Clone this repository
+- cd urler
+- bundle install
+- rails db:create db:migrate
+- rails s
