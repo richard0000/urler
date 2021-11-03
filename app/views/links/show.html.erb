@@ -9,7 +9,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h2 class="fw-light">Great! Here's your new shor URL</h2>
-        <a><%= "#{request.domain}/#{@link.slug}" %></a>
+        <a href=<%="#{request.base_url}/goto/#{@link.slug}" %> target="_blank"><%= "#{request.domain}/goto/#{@link.slug}" %></a>
       </div>
     </div>
   </section>
